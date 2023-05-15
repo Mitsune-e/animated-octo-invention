@@ -20,9 +20,29 @@ testwall = wall.Wall(tileX, tileY)
 wall_surface = pygame.Surface((testwall.tile.widht, testwall.tile.height))
 wall_surface.fill(testwall.tile.bgcolor)
 
+middlewalls = wall.Wall(tileX, tileY)
+middleWall_surface = pygame.Surface(
+    (middlewalls.tile.widht, middlewalls.tile.height))
+middleWall_surface.fill(middlewalls.tile.bgcolor)
+
 testfloor = floor.Floor(tileX, tileY)
 floor_surface = pygame.Surface((testfloor.tile.widht, testfloor.tile.height))
 floor_surface.fill(testfloor.tile.bgcolor)
+
+
+def drawmiddlewalls():
+    i = 0
+    c = 0
+    x = 50
+    y = 100
+    for c in range(5):
+        for i in range(8):
+            screen.blit(wall_surface, (x, y))
+            i += 1
+            x += 100
+        x = 50
+        c += 1
+        y += 100
 
 
 def drawrightwall():
@@ -92,6 +112,7 @@ while True:
     drawrightwall()
     drawbottomwall()
     drawlevelfloor()
+    drawmiddlewalls()
 
     pygame.display.update()
     clock.tick(60)
