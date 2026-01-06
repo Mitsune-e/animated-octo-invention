@@ -1,2 +1,2 @@
 # animated-octo-invention
-Trying out pygame 
+Drafts directory, just a place to store random drafts.
