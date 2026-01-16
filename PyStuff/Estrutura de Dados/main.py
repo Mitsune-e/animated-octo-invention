@@ -17,7 +17,7 @@ print("2 - Listas Ligadas")
 menu = int (input("Escolha uma opção: "))
 
 if menu == 1:
-    vetor_teste = Vetor(3)
+    vetor_teste = Vetor(0)
     vetor_teste.inserir_elemento_posicao(1, 0)
     vetor_teste.inserir_elemento_posicao(2, 1)
     vetor_teste.inserir_elemento_posicao(3, 2)
@@ -26,3 +26,9 @@ if menu == 1:
     print(vetor_teste.listar_elemento(1))
     print(vetor_teste.listar_elemento(2))
     print(vetor_teste.listar_elemento(3))
+    print(vetor_teste.tamanho())
+    print(vetor_teste)
+    print(vetor_teste.contem(4))
+    print(vetor_teste.indice(4))
+    print(vetor_teste.contem(6))
+    print(vetor_teste.indice(5))
