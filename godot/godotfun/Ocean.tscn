@@ -6,8 +6,10 @@
 [ext_resource type="Texture2D" uid="uid://b6vhdw7bk3y7s" path="res://Assets/Helicopter.png" id="4_dpb35"]
 [ext_resource type="Texture2D" uid="uid://dw2lf0qeluh1l" path="res://Assets/Carrier.png" id="5_ea4x0"]
 
-[node name="Ocean" type="Node2D" unique_id=583309036]
+[node name="Ocean" type="Node2D" unique_id=583309036 node_paths=PackedStringArray("_planeSprite", "_heliSprite")]
 script = ExtResource("1_sberu")
+_planeSprite = NodePath("Plane")
+_heliSprite = NodePath("Helicopter")
 
 [node name="Water" type="Sprite2D" parent="." unique_id=500396585]
 z_index = -1
@@ -28,4 +30,5 @@ texture = ExtResource("3_mkrdd")
 [node name="Helicopter" type="Sprite2D" parent="." unique_id=975742566]
 z_index = 1
 position = Vector2(200, 100)
+rotation = 1.5707964
 texture = ExtResource("4_dpb35")
