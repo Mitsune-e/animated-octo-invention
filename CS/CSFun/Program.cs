@@ -1,2 +1,63 @@
 ﻿// See https://aka.ms/new-console-template for more information
+
+
 Console.WriteLine("Hello, World!");
+Console.Write("Enter character name: ");
+string characterName = Console.ReadLine();
+
+Console.Write($"Is {characterName} a hero? (true/false): ");
+bool isHero = bool.Parse(Console.ReadLine());
+
+Console.Write($"Is {characterName} a villain? (true/false): ");
+bool isVillain = bool.Parse(Console.ReadLine());
+
+Console.Write($"How many rings does {characterName} have? ");
+int numberOfRings = int.Parse(Console.ReadLine());
+
+
+if (isHero == true && numberOfRings >= 1)
+{
+    Console.WriteLine($"{characterName} must proctect the ring!");
+}
+else if (isVillain == true && numberOfRings >= 1)
+{
+    Console.WriteLine($"{characterName} must use the ring for evil!");
+}
+else if(isHero != true && isVillain != true)
+{
+    Console.WriteLine($"{characterName} has no role in this battle.");
+}
+
+if (characterName == "Frodo")
+{
+    Console.WriteLine($"{characterName} destroyed the ring?");
+    bool isRingDestroyed = bool.Parse(Console.ReadLine());
+
+    if (isRingDestroyed == true)
+    {
+        Console.WriteLine("The quest is complete!");
+
+    }
+    else { Console.WriteLine("The ring is still in Frodo's possession."); }
+}
+/* 
+If the character is a hero and has 1 or more rings, 
+print: "CharacterName must protect the ring!"
+
+ELSE If the character is a villain and has 1 or more rings, 
+print: "CharacterName must use the ring for evil!"
+
+ELSE if the character is neither a hero nor a villain, 
+print: "CharacterName has no role in this battle."
+*/
+
+/*
+Use a switch statement on characterName to print whether the character 
+is from the Fellowship of the Ring or not.
+*/
+
+/* TOUGH!!!
+if the character is Frodo, check whether the ring is destroyed 
+(read in  user input for isRingDestroyed), and print "The quest is complete!" 
+if true, otherwise print "The ring is still in Frodo's possession."
+*/

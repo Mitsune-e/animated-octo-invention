@@ -1,0 +1,99 @@
+//using System;
+
+//Console.WriteLine("Hello, Middle Earth!");
+
+//// if, else if, else, switch
+
+//string name = "Frodo";
+//bool itWasTrue = name != "frodo";
+
+//// Comparison operators (==, !=, <, >, <=, >=)
+//if(name != "frodo")
+//{
+//    Console.WriteLine("Frodo is a hero!");
+//}
+//Console.WriteLine($"itWasTrue:{itWasTrue}");
+
+//int frodoRings = 2;
+//int gandalfRings = 2;
+//if (frodoRings < gandalfRings)
+//{
+//    Console.WriteLine("Frodo has less rings than Gandalf.");
+//}
+//else if(frodoRings == gandalfRings)
+//{
+//    Console.WriteLine("Frodo has the same rings as Gandalf.");
+//}
+//else 
+//{
+//    Console.WriteLine("Frodo has more rings than Gandalf.");
+//}
+
+//// Logical operators (&&, ||, !)
+
+//bool isFrodoHero = true;
+//bool isSauronVillain = true;
+
+//if (isFrodoHero && isSauronVillain)  // Both must be true
+//{
+//    Console.WriteLine("Frodo, the hero, must defeat Sauron, the villain.");
+//}
+
+//bool isGollumVillain = true;
+//if (isGollumVillain || isSauronVillain) // One of these must be true  
+//{
+//    Console.WriteLine("Frodo, the hero, must defeat Sauron, the villain.");
+//}
+
+//bool isRingDestroyed = false;
+//if (!isRingDestroyed)  // Checks if the ring is NOT destroyed
+//{
+//    Console.WriteLine("The One Ring is still intact!");
+//}
+
+//if (isFrodoHero && (isSauronVillain || isRingDestroyed)) 
+//{
+//    Console.WriteLine("Frodo must face Sauron, even if the ring is destroyed.");
+//}
+
+
+//if (!isFrodoHero || (isSauronVillain && !isRingDestroyed)) 
+//{
+//    Console.WriteLine("Sauron still threatens Middle-Earth because the ring is not destroyed.");
+//}
+
+//name = "Aragorn";
+//switch (name)
+//{
+//    case "Sauron":
+//        Console.WriteLine("Sauron is a villain!");
+//        break;
+//    case "Frodo":
+//    case "Legolas":
+//    case "Aragorn":
+//        Console.WriteLine($"{name} is a hero!");
+//        break;
+//    default:
+//        Console.WriteLine($"{name} is neutral.");
+//        break;
+//}
+
+//string result = x > 10 ? "BIG" : "SMALL"; 
+
+////string result = "SMALL";
+//// if(x > 10)
+//// {
+////     result = "BIG";
+//// }
+//// else
+//// {
+////     result = "SMALL";
+//// }
+
+
+
+
+
+
+
+
