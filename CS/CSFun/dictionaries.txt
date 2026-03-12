@@ -1,0 +1,68 @@
+using System;
+using System.Collections.Generic;
+
+
+Dictionary<string, string> fellowshipRoles = new Dictionary<string, string>();
+
+fellowshipRoles.Add("Frodo", "Ring-bearer");
+fellowshipRoles.Add("Gandalf", "Wizard");
+fellowshipRoles.Add("Aragorn", "Ranger");
+fellowshipRoles.Add("Legolas", "Archer");
+fellowshipRoles.Add("Gimli", "Warrior");
+
+string frodoRole = fellowshipRoles["Frodo"];
+Console.WriteLine($"\nFrodo's role: {frodoRole}");
+
+foreach (string member in fellowshipRoles.Keys)
+{
+    Console.WriteLine($"Member:{member}");
+}
+
+foreach (string role in fellowshipRoles.Values)
+{
+    Console.WriteLine($"Role:{role}");
+}
+
+foreach (KeyValuePair<string, string> role in fellowshipRoles)
+{
+    Console.WriteLine($"{role.Key} is the {role.Value}.");
+}
+
+if(fellowshipRoles.ContainsKey("Frodo"))
+{
+    Console.WriteLine("Frodo is part of the Fellowship.");
+}
+
+
+fellowshipRoles.Remove("Aragorn");
+foreach (KeyValuePair<string, string> role in fellowshipRoles)
+{
+    Console.WriteLine($"{role.Key} is the {role.Value}.");
+}
+
+if(fellowshipRoles.ContainsKey("Aragorn") == false)
+{
+    Console.WriteLine("Aragorn is not part of the Fellowship.");
+}
+
+
+fellowshipRoles["Legolas"] = "High-Elf";
+foreach (KeyValuePair<string, string> role in fellowshipRoles)
+{
+    Console.WriteLine($"{role.Key} is the {role.Value}.");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
