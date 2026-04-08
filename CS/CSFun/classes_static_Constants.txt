@@ -1,0 +1,123 @@
+// Charatcer.cs
+
+using System;
+
+class Character
+{
+    public const string FAMILY = "Fellowship";
+
+    public static int NumberOfCharacters = 0;
+
+    // private member variables
+    private string _name;
+    private int _speed = 40;
+    private int _strength = 500;
+
+    public int Strength 
+    { 
+        get
+        {
+            Console.WriteLine($"Strength get invoked for {_name}");
+            return _strength;
+        }
+        
+        set
+        {
+            Console.WriteLine($"Strength set invoked for {_name}");
+            _strength = value < 100 ? 100 :  value;
+            // if(value < 100)
+            // {
+            //     _strength = 100;
+            // }
+            // else
+            // {
+            //     _strength = value;
+            // }
+        } 
+    }
+
+    public Character(string name)
+    {
+        _name = name;
+        NumberOfCharacters++;
+        Console.WriteLine($"Created Character {NumberOfCharacters} with name {_name} in family:{FAMILY}");
+    }
+
+    // functions
+    public string GetName()
+    {
+        return _name;
+    }
+
+    public int GetSpeed()
+    {
+        return _speed;
+    }
+    
+    public void SetSpeed(int speed)
+    {
+        if(speed > 90)
+        {
+            _speed = 90;
+        }
+        else if(speed < 10)
+        {
+            _speed = 10;
+        }
+        else
+        {
+            _speed = speed;
+        }
+    }
+
+
+}
+
+
+// Program.cs
+
+using System;
+
+Character frodo = new Character("Frodo");
+Character legolas = new Character("Legolas");
+
+Console.WriteLine($"Name is {frodo.GetName()} with speed: {frodo.GetSpeed()}");
+Console.WriteLine($"Name is {legolas.GetName()} with speed: {legolas.GetSpeed()}");
+
+legolas.SetSpeed(100);
+Console.WriteLine($"Name is {legolas.GetName()} with speed: {legolas.GetSpeed()}");
+
+Console.WriteLine();
+Console.WriteLine($"Name is {frodo.GetName()} with strength: {frodo.Strength}");
+Console.WriteLine($"Name is {legolas.GetName()} with strength: {legolas.Strength}");
+
+legolas.Strength = 50;
+Console.WriteLine($"Name is {legolas.GetName()} with strength: {legolas.Strength}");
+
+Console.WriteLine(Character.FAMILY);
+
+Console.WriteLine($"We have created {Character.NumberOfCharacters} characters");
+
+
+Utils.SayStuff();
+Utils.SayStuff();
+Utils.SayStuff();
+Utils.SayStuff();
+Utils.SayStuff();
+Utils.SayStuff();
+
+
+// Utils.cs
+
+using System;
+
+static class Utils
+{
+    static int num = 0;
+
+    public static void SayStuff()
+    {
+        num++;
+        Console.WriteLine($"Utils.SayStuff: {num} times");
+    }
+}

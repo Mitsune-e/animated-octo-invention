@@ -1,0 +1,36 @@
+using System;
+
+Random random = new Random(101);
+
+// return type, name, (parameters)
+void SayPhrase(string name, string phrase)
+{
+    Console.WriteLine($"{name} thinks: {phrase}");
+}
+
+int GetHealth(string name)
+{    
+    int health = random.Next(50, 101);
+    Console.WriteLine($"{name}'s current health is: {health}");
+    return health;
+}
+
+SayPhrase("Frodo", "My precious!");
+SayPhrase("Aragorn", "For Frodo!");
+
+int health = GetHealth("Gandalf");
+int health2 = GetHealth("Frodo");
+
+Console.WriteLine($"Set {health} health for Gandalf");
+Console.WriteLine($"Set {health2} health for Frodo");
+
+
+
+int Square(int n)
+{
+    return n * n;
+}
+
+int Square(int n) => n * n;
+
+Console.WriteLine($"{Square(7)}");
