@@ -1,43 +1,9 @@
-﻿using System;
+﻿using CSFun;
+using System;
 using System.Collections.Generic;
 
-
-Dictionary<string, string> fellowshipRoles = new Dictionary<string, string>();
-
-Dictionary<string, List<string>> characterAbilities = new Dictionary<string, List<string>>();
-
-characterAbilities.Add("Frodo", new List<string> {"Stealth", "Courage"});
-characterAbilities.Add("Legolas", new List<string> { "Archery", "Speed" });
-characterAbilities.Add("Gandalf", new List<string> { "Magic", "Wisdom" });
-characterAbilities.Add("Aragorn", new List<string> { "Swordsmanship", "Speed" });
-characterAbilities.Add("Gimli", new List<string> { "Axe Throwing", "Strength" });
-characterAbilities.Add("Boromir", new List<string> { "Swordsmanship", "Bravery" });
-
-foreach (KeyValuePair<string, List<string>> character in characterAbilities)
-{
-    Console.WriteLine($"{character.Key}'s abilities:");
-    foreach (string ability in character.Value)
-    {
-        Console.WriteLine($"- {ability}");
-    }
-}
-
-foreach(var character in characterAbilities)
-{
-    if (character.Value.Contains("Speed") == true)
-    {
-        Console.WriteLine($"{character.Key} has the ability speed");
-    }
-}
-
-/*
-Create a dictionary called characterAbilities where the key is the character's name
-and the value is a List of abilities they have.
-For example, Frodo might have ["Stealth", "Courage"] and Gandalf might have ["Magic", "Wisdom"].
-Make sure at least two characters have the ability "Speed". 
-Have at least three characters total
-
-Print the names and abilities to the console.
-
-Print only the characters that have the ability "Speed" to the console by using a loop
-*/
+Hobbit hob = new Hobbit("Sam");
+hob.Introduce();
+hob.SneakAround();
+hob.ChangeName("AAA");
+hob.Introduce();
