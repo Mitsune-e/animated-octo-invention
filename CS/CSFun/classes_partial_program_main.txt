@@ -1,0 +1,104 @@
+// Charatcer.cs
+using System;
+
+class Character
+{
+    public static int Count = 0;
+
+    public string Name { get; protected set; }  
+    public string Race { get; private set; } 
+
+    public Character(string name, string race)
+    {
+        Name = name;
+        Race = race;
+        Count++;        
+    }
+
+    protected void Stuff()
+    {
+
+    }
+
+    public virtual void Introduce()
+    {
+        Console.WriteLine($"I am {Name}, a {Race}.");
+    }
+
+    public static void CountCharacters()
+    {
+        Console.WriteLine($"There are {Count} characters.");
+    }
+}
+
+// Hobbit.cs
+
+using System;
+
+class Hobbit : Character
+{
+    public Hobbit(string name) : base(name, "Hobbit") {}
+
+    public void SneakAround()
+    {
+        Console.WriteLine($"{Name} is sneaking around");
+    }
+
+    public void ChangeName(string newName)
+    {
+        Name = newName;
+        Stuff();
+    }
+}
+
+// Monster.cs
+
+using System;
+
+class Monster : Character
+{
+    public Monster(string name) : base(name, "Monster") {}
+
+    public override void Introduce()
+    {
+        base.Introduce();
+        Console.WriteLine($"I am {Name}, the feared monster!");
+    }
+}
+
+
+// Program.cs
+
+using System;
+using Hobbits;
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        Hobbit hob = new Hobbit("Sam");
+        hob.Introduce();
+        hob.SneakAround();
+        hob.ChangeName("Pippin");
+        hob.Introduce();
+
+
+        Monster m = new Monster("Suaron");
+        m.Introduce();
+
+        Character.CountCharacters();
+
+
+        if (hob is Hobbit)
+        {
+            Console.WriteLine("Hob is a Hobbit");
+        }
+
+        if (hob is Character)
+        {
+            Console.WriteLine("Hob is a Character");
+        }
+    }
+}
+
+

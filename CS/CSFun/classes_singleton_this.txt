@@ -1,0 +1,71 @@
+
+class Mordor
+{
+    private static Mordor instance;
+
+    public int NumOrcs { get; set; } = 0;
+
+    private Mordor() 
+    { 
+        Console.WriteLine("Mordor instance created!");
+    }
+
+    public static Mordor Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = new Mordor();
+            }
+            return instance;
+        }
+    }
+
+    public void SayHello()
+    {
+        Console.WriteLine("Hello from the Mordor instance!");
+    }
+
+    public void AddOrc()
+    {
+        NumOrcs++;
+    }
+}
+
+class Rock
+{
+    private string name;
+    private int weight;
+
+    public Rock(string name, int Weight)
+    {
+        this.name = name;
+        weight = Weight;
+    }
+
+    public override string ToString()
+    {
+        return $"Name: {this.name}, Weight: {this.weight}";
+    }
+}
+
+
+Console.WriteLine("Starting...");
+
+Mordor m = Mordor.Instance;
+
+m.SayHello();
+m.AddOrc();
+
+Console.WriteLine(m.NumOrcs);
+
+Mordor m2 = Mordor.Instance;
+m2.AddOrc();
+
+Console.WriteLine(m2.NumOrcs);
+
+
+Rock myRock = new Rock("Granite", 15);
+
+Console.WriteLine(myRock);
