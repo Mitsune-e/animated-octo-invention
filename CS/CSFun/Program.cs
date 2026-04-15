@@ -1,9 +1,6 @@
 ﻿using CSFun;
 using System;
-using System.Collections.Generic;
 
-Hobbit hob = new Hobbit("Sam");
-hob.Introduce();
-hob.SneakAround();
-hob.ChangeName("AAA");
-hob.Introduce();
+Console.WriteLine("Starting...");
+Rock myRock = new Rock("Granite", 15);
+Console.WriteLine(myRock);

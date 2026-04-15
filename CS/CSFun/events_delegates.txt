@@ -1,0 +1,37 @@
+using System;
+
+public class ScoringSystem
+{
+    public delegate void ScoredEvent();
+    public event ScoredEvent OnScored;
+
+    public void Score()
+    {
+        Console.WriteLine("Scoring...");
+        if (OnScored != null)
+        {
+            OnScored.Invoke();
+        }
+    }
+}
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        ScoringSystem scoringSystem = new ScoringSystem();
+        scoringSystem.OnScored += HandleScore;
+        scoringSystem.OnScored += HandleScore2;
+        scoringSystem.Score();
+    }
+
+    public static void HandleScore()
+    {
+        Console.WriteLine("HandleScore event handled!");
+    }
+
+    public static void HandleScore2()
+    {
+        Console.WriteLine("HandleScore2 event handled!");
+    }
+}

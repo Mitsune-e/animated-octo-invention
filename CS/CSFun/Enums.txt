@@ -1,0 +1,14 @@
+enum Weapon
+{
+    Sword,
+    Axe,
+    Spear,
+}
+
+Weapon myWeapon = Weapon.Spear;
+
+
+private static void SayWeapon(Weapon wp)
+{
+	Console.WriteLine($"I am using a {wp}");
+}
