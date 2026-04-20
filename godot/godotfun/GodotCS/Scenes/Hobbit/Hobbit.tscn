@@ -1,0 +1,10 @@
+[gd_scene format=3 uid="uid://cveh6vkr1dna5"]
+
+[ext_resource type="Script" uid="uid://d3q3gxc1rv2gl" path="res://GodotCS/Scenes/Hobbit/Hobbit.cs" id="1_tgqm2"]
+[ext_resource type="Texture2D" uid="uid://bwpxrwnflg40l" path="res://GodotCS/Assets/Hobbit.png" id="1_wwxxg"]
+
+[node name="Hobbit" type="Node2D" unique_id=1091164977]
+script = ExtResource("1_tgqm2")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=402109627]
+texture = ExtResource("1_wwxxg")

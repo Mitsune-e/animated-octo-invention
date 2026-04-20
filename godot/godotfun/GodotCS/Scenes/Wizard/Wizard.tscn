@@ -1,0 +1,12 @@
+[gd_scene format=3 uid="uid://bhpsy4dbljm04"]
+
+[ext_resource type="Texture2D" uid="uid://doe8tp2ggkhwj" path="res://GodotCS/Assets/Wizard.png" id="1_b4te6"]
+[ext_resource type="Script" uid="uid://dhd2tfwlaui80" path="res://GodotCS/Scenes/Wizard/Wizard.cs" id="1_tk2jy"]
+
+[node name="Wizard" type="Node2D" unique_id=1814260716]
+scale = Vector2(0.7, 0.7)
+script = ExtResource("1_tk2jy")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=206487754]
+position = Vector2(352.85712, 644.2857)
+texture = ExtResource("1_b4te6")
