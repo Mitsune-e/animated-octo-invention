@@ -5,8 +5,10 @@
 [ext_resource type="PackedScene" uid="uid://cveh6vkr1dna5" path="res://GodotCS/Scenes/Hobbit/Hobbit.tscn" id="3_6nim8"]
 [ext_resource type="PackedScene" uid="uid://bhpsy4dbljm04" path="res://GodotCS/Scenes/Wizard/Wizard.tscn" id="4_6nim8"]
 
-[node name="World" type="Node2D" unique_id=397766741]
+[node name="World" type="Node2D" unique_id=397766741 node_paths=PackedStringArray("_wizard", "_hobbit")]
 script = ExtResource("1_7ulaq")
+_wizard = NodePath("Wizard")
+_hobbit = NodePath("Hobbit")
 
 [node name="Sprite2D" type="Sprite2D" parent="." unique_id=2021480160]
 position = Vector2(576, 324)
