@@ -1,0 +1,47 @@
+[gd_scene format=3 uid="uid://bhytlmcyhr7lk"]
+
+[ext_resource type="Texture2D" uid="uid://djjponsttwqfs" path="res://Assets/GemBg.png" id="1_iukft"]
+[ext_resource type="Script" uid="uid://b6vcjgymmiurn" path="res://Scenes/Game.cs" id="1_kldst"]
+[ext_resource type="PackedScene" uid="uid://cnnq8824yg5bk" path="res://Scenes/Dice.tscn" id="2_gl6un"]
+[ext_resource type="PackedScene" uid="uid://bwi54w2adx1vg" path="res://Scenes/Fox.tscn" id="3_j5yw3"]
+[ext_resource type="FontFile" uid="uid://d2nlwt14impgw" path="res://Assets/LuckiestGuy-Regular.ttf" id="5_b2bpf"]
+[ext_resource type="AudioStream" uid="uid://rxwcie4b6wbb" path="res://Assets/tetris.mp3" id="6_7lihs"]
+
+[sub_resource type="LabelSettings" id="LabelSettings_7lihs"]
+font = ExtResource("5_b2bpf")
+font_size = 48
+outline_size = 8
+outline_color = Color(0.14044744, 0.14044744, 0.14044744, 1)
+
+[node name="Game" type="Node2D" unique_id=1374520624 node_paths=PackedStringArray("_fox", "_scoreLabel", "_spawnTimer")]
+position = Vector2(-2, 0)
+script = ExtResource("1_kldst")
+_fox = NodePath("Fox")
+_diceScene = ExtResource("2_gl6un")
+_scoreLabel = NodePath("Label")
+_spawnTimer = NodePath("Timer")
+
+[node name="BG" type="Sprite2D" parent="." unique_id=2056588312]
+position = Vector2(578, 325)
+scale = Vector2(0.6, 0.6)
+texture = ExtResource("1_iukft")
+
+[node name="Fox" parent="." unique_id=509267629 instance=ExtResource("3_j5yw3")]
+position = Vector2(537, 605)
+
+[node name="Label" type="Label" parent="." unique_id=236969742]
+offset_left = 25.0
+offset_top = 28.0
+offset_right = 147.0
+offset_bottom = 77.0
+text = "0000"
+label_settings = SubResource("LabelSettings_7lihs")
+
+[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=163597767]
+stream = ExtResource("6_7lihs")
+volume_db = -9.0
+autoplay = true
+
+[node name="Timer" type="Timer" parent="." unique_id=669440840]
+wait_time = 1.3059999999999998
+autostart = true
