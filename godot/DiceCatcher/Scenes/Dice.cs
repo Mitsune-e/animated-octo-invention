@@ -4,7 +4,7 @@ using System.Numerics;
 
 public partial class Dice : Area2D
 {
-
+	[Signal] public delegate void GameOverEventHandler();
 	[Export] private Sprite2D _diceSprite;
 	private const float SPEED = 80.0f;
 	private const float BASE_ROTATION_SPEED = 4.0f;
@@ -32,6 +32,7 @@ public partial class Dice : Area2D
 		{
 			SetPhysicsProcess(false);
 			QueueFree();
+			EmitSignal("GameOver");
 		}
 	}
 }

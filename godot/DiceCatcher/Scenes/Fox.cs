@@ -6,7 +6,7 @@ public partial class Fox : Area2D
 
 	[Signal] public delegate void PointScoredEventHandler();
 	[Export] private Sprite2D _foxSprite;
-	private const float SPEED = 150.0f;
+	private const float SPEED = 200.0f;
 	private AudioStreamPlayer eatAudio;
     private float _move;
 

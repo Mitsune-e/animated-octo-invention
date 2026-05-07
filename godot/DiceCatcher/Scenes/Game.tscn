@@ -13,13 +13,14 @@ font_size = 48
 outline_size = 8
 outline_color = Color(0.14044744, 0.14044744, 0.14044744, 1)
 
-[node name="Game" type="Node2D" unique_id=1374520624 node_paths=PackedStringArray("_fox", "_scoreLabel", "_spawnTimer")]
+[node name="Game" type="Node2D" unique_id=1374520624 node_paths=PackedStringArray("_fox", "_scoreLabel", "_spawnTimer", "_music")]
 position = Vector2(-2, 0)
 script = ExtResource("1_kldst")
 _fox = NodePath("Fox")
 _diceScene = ExtResource("2_gl6un")
 _scoreLabel = NodePath("Label")
 _spawnTimer = NodePath("Timer")
+_music = NodePath("Music")
 
 [node name="BG" type="Sprite2D" parent="." unique_id=2056588312]
 position = Vector2(578, 325)
@@ -37,7 +38,7 @@ offset_bottom = 77.0
 text = "0000"
 label_settings = SubResource("LabelSettings_7lihs")
 
-[node name="Music" type="AudioStreamPlayer2D" parent="." unique_id=163597767]
+[node name="Music" type="AudioStreamPlayer" parent="." unique_id=4784830]
 stream = ExtResource("6_7lihs")
 volume_db = -9.0
 autoplay = true
