@@ -14,7 +14,7 @@ outline_size = 8
 outline_color = Color(0.14044744, 0.14044744, 0.14044744, 1)
 
 [node name="Game" type="Node2D" unique_id=1374520624 node_paths=PackedStringArray("_fox", "_scoreLabel", "_spawnTimer", "_music")]
-position = Vector2(-2, 0)
+position = Vector2(2, 0)
 script = ExtResource("1_kldst")
 _fox = NodePath("Fox")
 _diceScene = ExtResource("2_gl6un")
